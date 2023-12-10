@@ -1,6 +1,10 @@
 # Step 1
 We were given a zip file called ``Secret.zip``. So I used binwalk to analyze any hidden files within and and managed to extract a jpg image in it called ``SBT.jpg``. Again, I used binwalk to analyze the jpg image and managed to extract a png image called ``message.png``. However, this png image was obviously modified since there were no images. So I used strings/cat to find any hidden text in it and found our first ciphertext.
 
+<p align='center'>
+  <img src='/images/dcrypt1.png' alt="dcrypt1">
+</p>
+
 ```
 h5BA68F35I_%3E%3B%3BG3gdc%3E%3EFF9g5deA82hhh%3F%3Ea%3B22gdh%3Ee%3B%3B%6025%60A682bhddeA82h4IBA68F2gd%60%3E%3B%3B%3B%60g5c%3E%3EFF%60hd%3C%3Ea%3EFbhh_%3Fe8F255g%3EeEG32d%60%3EA83hg5%3C%3EaF2bhhB%3Fa8Gf55g%3Ee%3B%3C32d%60A6FF9g5%3CAA82hhh%3F%3Ea%3B22gd%60%3E%3BEG32d%60A6FGfg5%3CAJ82hh5%3F%3Ea%3B3f55_%3E%3BEG32d%60A682bhddeA82hhh%3F%3Fa8F2gdh%3Ee%3B%3B%60g5c%3EAGF9g5dca8Fhhh_%3Fe8Gfgd%60%3E%3B%3BF%6025%60A682bhd%3CAA82h4I_A%3B8Gfgdh%3EeEG3gdc%3E%3E82bhd%3CAJ%3E2bhh_%3Fe8F255g%3EeEF%60g5c%3EAFF%60hd%3CAA%3E2b4I%3F%3Ea%3B3fgd%3E%3EeEF%60g5cA6FF9g5%3C%3Ea8Fhh5%3F%3Ea%3B22gdh%3EeEG3gdcA683hg5deA%3E2bhh%3F%3Ea%3B22gd%60%3E%3BEG72d%60A682bhd%3C%3Ea%3EFb4I_%3Ee%3B23gdh%3EeEF%6025%60A6FF%60hd%3C%3EaF2bhh%3F%3Ea%3B3f55g%3EeEF%60g5c%3EAFF9g5deA%3E2b4I%3F%3Ea%3B3fgd%3E%3EeEF%6025%60A6FF9g5%3C%3Ea8Fhh5%3F%3Fa8F255g%3EeEG3gdcA683hg5%3CAA%3E2bhh_%3Ee%3B22gd%60%3E%3BEG72d%60%3E%3E82bhddeA82h4I_A%3B8Gf55_%3E%3BEG32d%60%3E%3E82bhd%3CAJ82h4I%3F%3Ea%3B3f55g%3EeEF%60g5c%3EAFF%60hd%3C%3Ea8Fhhh_%3Ee%3B3f5Ig%3EeEG32d%60%3E%3EFF9g5%3C%3Ea8Fhh5_%3Fe8Gf55_%3E%3BEF%605d%60A682bhc
 ```
@@ -75,6 +79,10 @@ Reverse done, next is to attempt a Base64 decode as mentioned in the hint.
 ```
 
 Mind the language but wtf is this? I thought I did something wrong but after asking the discord member about it, they told me to research on "whitespaces" and hence I googled search whitespace decode and the results gave a whitespace language decoder in dcode (I had no idea about this encoding technique LMAO). Using the blank spaces given after Base64, we get the flag!
+
+<p align='center'>
+  <img src='/images/dcrypt2.png' alt="dcrypt2">
+</p>
 
 ```
 SBT{Y0U_AR3_4_N3rd!} 
